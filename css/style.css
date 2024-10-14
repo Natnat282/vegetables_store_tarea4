@@ -1,0 +1,401 @@
+/********** Template CSS **********/
+:root {
+    --primary: #3CB815;
+    --secondary: #F65005;
+    --light: #F7F8FC;
+    --dark: #111111;
+}
+body{
+    background: rgb(247,248,252);
+}
+
+/**Section nav**/
+.nav-link{
+    color: rgb(101, 101, 101);
+}
+/**section arousel**/
+.carousel-item {
+    height: 100vh; /* Altura completa de la ventana */
+    min-height: 300px; /* Altura mínima */
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: auto; 
+}
+
+.carousel-caption {
+    bottom: 200px; 
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    justify-content: left;
+    text-align: left;
+    font-size: 45px; 
+    text-transform: uppercase;
+    margin-left: -2rem; 
+}
+
+.carousel-btn a {
+    border-radius: 40px;
+    width: 8%; 
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.carousel-control {
+    background: #3CB815;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 80%;
+    line-height: 65px;
+}
+
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 100px; 
+    }
+
+    .carousel-caption h5 {
+        font-size: 30px; 
+        margin-left: 0; 
+    }
+
+    .carousel-btn a {
+        width: 40%; 
+        margin-right: -20rem; 
+        align-items: center;
+    }
+}
+
+/**End section arousel**/
+
+/*** Section Header ***/
+.section-header {
+    position: relative;
+    padding-top: 25px;
+}
+
+.section-header::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+}
+
+.section-header::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary);
+}
+
+.section-header.text-start::before,
+.section-header.text-start::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+/**section nosotros**/
+.Nosotros {
+    background: white;
+}
+
+.nosotros-content {
+    padding: 5rem; 
+    display: flex;
+    flex-direction: row; /* Por defecto, en fila */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.nosotros-img img {
+    border-radius: 50%;
+    width: 30vw; /* Ajustar el tamaño de la imagen */
+    max-width: 300px; /* Limitar el tamaño máximo de la imagen */
+    cursor: pointer;
+}
+
+.nosotros-info {
+    text-align: left; /* Alinear texto a la izquierda */
+    margin-left: 5rem; /* Espacio a la izquierda */
+}
+
+.nosotros-txt {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.nosotros-btn {
+    margin-top: 2rem;
+}
+
+.nosotros-btn a {
+    border-radius: 40px;
+    font-size: 15px;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    .nosotros-content {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .nosotros-info {
+        margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+        text-align: left; /* Centrar texto */
+    }
+}
+
+/** end section nosotros**/
+.caracteriza{
+    padding: 0 5%;
+  
+}
+.Caracteriza-container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 3rem;
+ 
+}
+.section-header h1{
+    margin-top: 3rem;
+}
+.car-rows{
+    display: grid; /*responsive*/
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));/* aumenta el tamaño de las columnas */
+    gap: 2rem;/*da un espacion en un contendedor*/
+    margin-bottom: 6em;
+    padding: 30px;
+}
+.row{
+    background-color: white;
+    position: relative;
+    transition: 0.4s ease;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 100%; /* Ajusta el ancho del contenedor .row */
+    
+}
+.row-carcteriza-info h4{
+    margin-top: 1.5rem;
+}
+.row-carcteriza-info p{
+    line-height: normal;
+    margin-top: 1rem;
+}
+
+.row-carcteriza-info a{
+    border: 2px solid var(--primary);
+    border-radius: 40px;
+    font-size: 13px;
+    display: inline-block;
+    padding: 0 7%; 
+}
+
+.productos{
+    padding: 2% 10%;
+   background: white;
+}
+.productos-informacion{
+  display: flex;
+  flex-direction: row; /* Por defecto, en fila */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center;
+}
+
+.productos-items ul {
+    gap: 0.5rem;
+    list-style-type: none;
+    display: flex;
+    margin-top: 5rem;
+}
+@media (max-width: 768px) {
+    .productos-informacion {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .productos-items ul {
+        margin-left: -8rem; 
+        text-align: left; /* Centrar texto */
+    }
+}
+.productos-items .pi  {
+    border: 2px solid var(--primary); 
+    color: black; 
+    padding: 5px; 
+    display: inline-block; 
+    transition: background 0.3s ease; 
+}
+.productos-items .pi.active{
+    background: var(--primary);
+    color: white;
+}
+
+.productos-items .pi:hover {
+    background: var(--primary); 
+    color: white;
+}
+
+.pro-rows{
+    display: grid; /*responsive*/
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));/* aumenta el tamaño de las columnas */
+    gap: 2rem;/*da un espacion en un contendedor*/
+    margin-bottom: 6em;
+    padding: 30px;
+}
+
+
+.p-row img{
+   
+    object-fit: cover;
+    border-radius: 7px;
+    
+ }
+ .card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    max-width: 300px;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.product-name {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.price {
+    display: block;
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+.action-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.action-link i {
+    margin-right: 5px;
+}
+
+.Visita {
+    background: var(--primary);
+    padding: 5% 1%;
+}
+
+.visita-container {
+    display: flex;
+    flex-wrap: wrap; /* Esto permite que los elementos se muevan a una nueva línea si es necesario */
+}
+
+.visita-info {
+    padding: 1rem;
+    flex: 1 1 60%; 
+}
+.visita-name{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    
+}
+
+.visita-txt {
+    color: var(--light);
+    width: 90%;
+    text-align: left;
+    justify-content: left;
+    flex: 1 1 40%; 
+   
+    margin: 2rem 0 3rem;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+.visita-btn a {
+    display: inline-block;
+    background: var(--secondary);
+    border-radius: 20px;
+    padding: 0.5rem 3rem;
+    color: var(--light);
+    font-size: 1rem;
+    margin-top: 6rem;
+    margin-right: 10rem;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .visita-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .visita-btn a {
+        margin-top: 1rem;
+        margin-top: -15rem;
+        margin-left: -5rem;
+    }
+    .nosotros-content{
+       display: flex;
+    }
+
+   
+}
+
+.colored-bullets {
+    list-style-type: square; /* Tipo de viñeta */
+    padding-left: 20px; /* Espacio a la izquierda */
+}
+
+
+
+
